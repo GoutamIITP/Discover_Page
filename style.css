@@ -6,12 +6,59 @@ body {
 
 }
 
-.header {
+header {
     color:rgb(246, 240, 240);
+    text-align: center;
+    background: rgba(0,0,0,0.7);
     padding : 0;
     margin :0;
     border : 0;
     border-bottom: 5px solid black;
+;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+/* link styling */
+nav ul li a:link {
+    color: lightgray;
+}
+nav ul li a:visited {
+    color: yellow;
+}
+nav ul li a:hover {
+    color: orange;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background: black;
+    color: white;
+    text-decoration-color: white;
+    padding: 2px;
+    margin: 1px;
+    border-bottom: 2px solid black;
+}
+
+.external-link {
+    color: lightblue;
+    font-weight: bold;
+}
+.external-link:hover {
+    color: yellow;
 }
 
 .description {
@@ -21,6 +68,8 @@ body {
     line-height: 1.6;
     text-shadow: 1px 1px 2px White;
 }
+
+/* Table styling */
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -33,11 +82,35 @@ table:hover {
     cursor: pointer;
 }
 table tr:hover {
-    background-color: #22dbdb;
+    background-color: #2bcbd0;
 }
-th, td {
+td {
     text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+th {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Combinator selector */
+nav > ul > li > a {
+    font-size: 20px;
+}
+article + table {
+    margin-top: 30px;
+    border: 2px solid black;
+}
+table ~aside {
+    background : rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px;
+}
+aside {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px;
+    margin: 20px;
 }
 /* slide show */
 .slideshow-container {
@@ -87,4 +160,27 @@ th, td {
 }
 .slide:nth-child(3) {
     animation-delay: 5s;
+}
+
+
+/* things to do in ladakh */
+h3 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+/* Form styling */
+.things-to-do {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px;
+    margin: 20px;
+}
+
+
+h5 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
 }
