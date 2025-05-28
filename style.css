@@ -184,3 +184,62 @@ h5 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 100px;
 }
+
+/* Responsive Navigation */
+.menu-icon {
+    display: none; /* Hide hamburger icon by default on larger screens */
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+#menu-toggle {
+    display: none; /* Hide the actual checkbox */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li {
+    display: inline-block; /* Display list items inline for desktop */
+    margin: 0 15px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    header nav {
+        position: relative;
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger icon on smaller screens */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    nav ul {
+        display: none; /* Hide the navigation menu by default on smaller screens */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9); /* Dark background for mobile menu */
+        position: absolute;
+        top: 60px; /* Position below the header */
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block; /* Display list items as blocks in mobile menu */
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + ul {
+        display: flex; /* Show the menu when the checkbox is checked */
+    }
+}
